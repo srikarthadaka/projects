@@ -1,3 +1,0 @@
-pandas
-scikit-learn-intelex==2021.20221004.171935
-streamlit==1.17.0
