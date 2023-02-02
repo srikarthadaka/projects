@@ -1,6 +1,5 @@
 import streamlit as st
 import streamlit.components.v1 as stc
-
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import linear_kernel, cosine_similarity
@@ -65,6 +64,18 @@ def main():
     else:
         st.subheader("About")
         st.text("Built by Srikar Thadaka")
+    
+     @st.cache(allow_output_mutation=True)
+    def Pageviews():
+        return []
+
+    pageviews=Pageviews()
+    pageviews.append('dummy')
+
+    try:
+        st.markdown('{}'.format(len(pageviews)))
+    except ValueError:
+        st.markdown('{}'.format(1))
     
 if __name__ == '__main__':
     main()
