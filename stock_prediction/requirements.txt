@@ -1,8 +1,8 @@
-keras==2.11.0
-matplotlib==3.6.3
+keras
+matplotlib
 numpy
 pandas 
 plotly
 scikit-learn
-yfinance==0.2.9
-streamlit==1.17.0
+yfinance
+streamlit
