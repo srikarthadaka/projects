@@ -6,3 +6,4 @@ plotly @ file:///C:/ci/plotly_1658142442431/work
 scikit-learn-intelex==2021.20221004.171935
 tensorflow==2.11.0
 yfinance==0.2.9
+streamlit==1.17.0
