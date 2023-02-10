@@ -13,8 +13,6 @@ st.text('This app predicts the next 15 days stock price by using LSTM Machine le
 user_input = st.text_input('Enter Stock Ticker','AAPL')
 
 df = yf.download(tickers=user_input, period='3y')
-company_name = yf.Ticker(user_input)
-st.write(company_name.info['longName'])
 
 y = df['Close'].fillna(method='ffill')
 y = y.values.reshape(-1, 1)
