@@ -3,14 +3,7 @@ import pandas as pd
 import pickle as pkl
 import xgboost as xgb
 
-model = xgb.XGBClassifier(gamma=0,
-                                  subsample=1,
-                                  max_depth=3,
-                                  n_estimators=100,
-                                  learning_rate=0.1, 
-                                  min_child_weight=1, 
-                                  scale_pos_weight=1,
-                                  colsample_bytree=0.8)
+model = xgb.XGBClassifier(gamma=0,subsample=1,max_depth=3,n_estimators=100,learning_rate=0.1, min_child_weight=1, scale_pos_weight=1,colsample_bytree=0.8)
 model.load_model('xgb_model.json')
 
 # @st.cache
