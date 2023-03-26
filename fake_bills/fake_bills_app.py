@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import pickle as pkl
+import joblib
 import urllib.request
 
 data = pd.read_csv("https://raw.githubusercontent.com/srikarthadaka/projects/main/fake_bills/fake_bills.csv", sep=';')
@@ -8,10 +9,10 @@ data = pd.read_csv("https://raw.githubusercontent.com/srikarthadaka/projects/mai
 def predict(model_name, diagonal, height_left, height_right, margin_low, margin_up, length):
     if model_name == "XGBoost":
         urllib.request.urlretrieve('https://github.com/srikarthadaka/projects/blob/main/fake_bills/finalized_model_xgb.sav', 'finalized_model_xgb.sav')
-        model = pkl.load(open('finalized_model_xgb.sav', 'rb'))
+        model = joblib.load(open('finalized_model_xgb.sav', 'rb'))
     elif model_name == "Random Forest":
         urllib.request.urlretrieve('https://github.com/srikarthadaka/projects/blob/main/fake_bills/finalized_model_rf.sav', 'finalized_model_rf.sav')
-        model = pkl.load(open('finalized_model_rf.sav', 'rb'))
+        model = joblib.load(open('finalized_model_rf.sav', 'rb'))
     else:
         return None
     prediction = model.predict(pd.DataFrame([[diagonal, height_left, height_right, margin_low, margin_up, length]], 
