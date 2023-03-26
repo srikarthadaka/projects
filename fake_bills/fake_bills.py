@@ -4,7 +4,7 @@ import pickle as pkl
 import xgboost as xgb
 
 model = xgb.XGBClassifier()
-model.load_model('xgb_model.json')
+model.load_model('finalized_model_xgb.sav')
 
 # @st.cache
 # model = pkl.load(open('finalized_model_xgb.sav','rb'))
