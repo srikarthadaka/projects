@@ -1,2 +1,3 @@
 pandas
 streamlit
+pickle==4.0
