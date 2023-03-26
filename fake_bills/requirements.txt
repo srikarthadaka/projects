@@ -4,3 +4,4 @@ pickle5
 joblib
 xgboost
 sklearn
+scikit-learn
