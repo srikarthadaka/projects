@@ -3,3 +3,4 @@ streamlit
 pickle5
 joblib
 xgboost
+sklearn
