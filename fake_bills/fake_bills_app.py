@@ -6,9 +6,9 @@ data = pd.read_csv("https://raw.githubusercontent.com/srikarthadaka/projects/mai
 
 def predict(model_name, diagonal, height_left, height_right, margin_low, margin_up, length):
     if model_name == "XGBoost":
-        model = pkl.load(open('finalized_model_xgb.sav','rb'))
+        model = pkl.load(open("https://github.com/srikarthadaka/projects/blob/main/fake_bills/finalized_model_xgb.sav"))
     elif model_name == "Random Forest":
-        model = pkl.load(open('finalized_model_rf.sav','rb'))
+        model = pkl.load(open("https://github.com/srikarthadaka/projects/blob/main/fake_bills/finalized_model_rf.sav"))
     else:
         return None
     prediction = model.predict(pd.DataFrame([[diagonal, height_left, height_right, margin_low, margin_up, length]], 
