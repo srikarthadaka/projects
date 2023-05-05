@@ -7,7 +7,7 @@ st.title('Apple Stock Price Forecast')
 st.text('This app forecast the next 30 days Apple stock price by SARIMA model')
 
 df = pd.read_csv("https://raw.githubusercontent.com/srikarthadaka/projects/main/stock_prediction/apple_forecast/AAPL.csv",
-                 index_col='Date', parse_dates=['Date'], date_parser=lambda dates: pd.to_datetime.strptime(dates, '%d-%m-%Y'))
+                 index_col='Date', parse_dates=['Date'], date_parser=lambda dates: pd.to_datetime(dates, '%d-%m-%Y'))
 
 value = st.slider("Select a value", 1, 30, step=1)
 
