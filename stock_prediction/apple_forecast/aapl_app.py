@@ -9,7 +9,7 @@ st.text('This app forecast the next 30 days Apple stock price by SARIMA model')
 df = pd.read_csv("https://raw.githubusercontent.com/srikarthadaka/projects/main/stock_prediction/apple_forecast/aapl_data.csv",
                  index_col='Date')
 
-value = st.slider("Select a value", 1, 30, step=1)
+value = st.slider("Select a value", 1, 30, 30, step=1)
 
 def forecast(value):
     model_sarima = SARIMAX(df["Close"], order=(2,1,2), seasonal_order=(2,1,2,5))
